@@ -94,7 +94,7 @@
             this.txtSITUACAO.Location = new System.Drawing.Point(374, 120);
             this.txtSITUACAO.Name = "txtSITUACAO";
             this.txtSITUACAO.Size = new System.Drawing.Size(120, 32);
-            this.txtSITUACAO.TabIndex = 5;
+            this.txtSITUACAO.TabIndex = 11;
             // 
             // txtVALOR
             // 
@@ -102,7 +102,7 @@
             this.txtVALOR.Location = new System.Drawing.Point(92, 120);
             this.txtVALOR.Name = "txtVALOR";
             this.txtVALOR.Size = new System.Drawing.Size(120, 32);
-            this.txtVALOR.TabIndex = 6;
+            this.txtVALOR.TabIndex = 10;
             this.txtVALOR.TextChanged += new System.EventHandler(this.txtVALOR_TextChanged);
             // 
             // txtTIPO
@@ -111,7 +111,7 @@
             this.txtTIPO.Location = new System.Drawing.Point(374, 15);
             this.txtTIPO.Name = "txtTIPO";
             this.txtTIPO.Size = new System.Drawing.Size(120, 32);
-            this.txtTIPO.TabIndex = 9;
+            this.txtTIPO.TabIndex = 8;
             // 
             // txtTAMANHO
             // 
@@ -119,7 +119,7 @@
             this.txtTAMANHO.Location = new System.Drawing.Point(674, 15);
             this.txtTAMANHO.Name = "txtTAMANHO";
             this.txtTAMANHO.Size = new System.Drawing.Size(120, 32);
-            this.txtTAMANHO.TabIndex = 10;
+            this.txtTAMANHO.TabIndex = 9;
             // 
             // dgvCacambas
             // 
@@ -127,7 +127,8 @@
             this.dgvCacambas.Location = new System.Drawing.Point(12, 350);
             this.dgvCacambas.Name = "dgvCacambas";
             this.dgvCacambas.Size = new System.Drawing.Size(844, 150);
-            this.dgvCacambas.TabIndex = 11;
+            this.dgvCacambas.TabIndex = 20;
+            this.dgvCacambas.DoubleClick += new System.EventHandler(this.dgvCacambas_DoubleClick);
             // 
             // btnInserir
             // 
@@ -138,6 +139,7 @@
             this.btnInserir.TabIndex = 12;
             this.btnInserir.Text = "&Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // btnEditar
             // 
@@ -148,6 +150,7 @@
             this.btnEditar.TabIndex = 13;
             this.btnEditar.Text = "&Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnRemover
             // 
@@ -158,6 +161,7 @@
             this.btnRemover.TabIndex = 14;
             this.btnRemover.Text = "&Remover";
             this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // btnCancelar
             // 
@@ -168,6 +172,7 @@
             this.btnCancelar.TabIndex = 15;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGravar
             // 
@@ -178,6 +183,7 @@
             this.btnGravar.TabIndex = 16;
             this.btnGravar.Text = "&Gravar";
             this.btnGravar.UseVisualStyleBackColor = true;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // label1
             // 
@@ -213,7 +219,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(868, 512);
             this.ControlBox = false;
             this.Controls.Add(this.lblID);
@@ -239,6 +245,7 @@
             this.Name = "Cacambas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cacambas";
+            this.Load += new System.EventHandler(this.Cacambas_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCacambas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
