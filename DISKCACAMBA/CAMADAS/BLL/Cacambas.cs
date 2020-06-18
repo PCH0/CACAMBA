@@ -15,6 +15,20 @@ namespace DISKCACAMBA.CAMADAS.BLL
             return dalCacambas.Select();
         }
 
+        public List<MODEL.Cacambas> SelectByID(int id)
+        {
+            DAL.Cacambas dalCacambas = new DAL.Cacambas();
+            //verifica regras de negócio
+            return dalCacambas.SelectByID(id);
+        }
+
+        public List<MODEL.Cacambas> SelectByTipo(string tipo)
+        {
+            DAL.Cacambas dalCacambas = new DAL.Cacambas();
+            //verifica regras de negócio
+            return dalCacambas.SelectByTipo(tipo);
+        }
+
         public void Insert(MODEL.Cacambas cacambas)
         {
             DAL.Cacambas dalCacambas = new DAL.Cacambas();

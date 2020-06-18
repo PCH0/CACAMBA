@@ -166,5 +166,16 @@ namespace DISKCACAMBA
             txtSITUACAO.Text = dgvCacambas.SelectedRows[0].Cells["situacao"].Value.ToString();
 
         }
+
+        private void btnPESQUISAR_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPESQUISAR_Click_1(object sender, EventArgs e)
+        {
+            gpbPesquisa.Visible = !gpbPesquisa.Visible;
+        }
+
     }
 }

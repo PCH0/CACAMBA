@@ -45,6 +45,75 @@ namespace DISKCACAMBA.CAMADAS.DAL
             return lstcacambas;
         }
 
+        public List<MODEL.Cacambas> SelectByID(int id)
+        {
+            List<MODEL.Cacambas> lstcacambas = new List<MODEL.Cacambas>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "SELECT * FROM Cacambas WHERE id=@id";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@id", id);
+            try
+            {
+                conexao.Open();
+                SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dados.Read())
+                {
+                    MODEL.Cacambas cacambas = new MODEL.Cacambas();
+                    cacambas.id = Convert.ToInt32(dados["id"].ToString());
+                    cacambas.tipo = dados["tipo"].ToString();
+                    cacambas.tamanho = dados["tamanho"].ToString();
+                    cacambas.valor = Convert.ToSingle(dados["valor"].ToString());
+                    cacambas.situacao = Convert.ToInt32(dados["situacao"].ToString());
+                    lstcacambas.Add(cacambas);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Erro na Consulta de Cacambas");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+
+            return lstcacambas;
+        }
+
+        public List<MODEL.Cacambas> SelectByTipo(string tipo)
+        {
+            List<MODEL.Cacambas> lstcacambas = new List<MODEL.Cacambas>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "SELECT * FROM Cacambas WHERE (tipo LIKE @tipo);";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@tipo", "%" + tipo.Trim() + "%");
+
+            try
+            {
+                conexao.Open();
+                SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dados.Read())
+                {
+                    MODEL.Cacambas cacambas = new MODEL.Cacambas();
+                    cacambas.id = Convert.ToInt32(dados["id"].ToString());
+                    cacambas.tipo = dados["tipo"].ToString();
+                    cacambas.tamanho = dados["tamanho"].ToString();
+                    cacambas.valor = Convert.ToSingle(dados["valor"].ToString());
+                    cacambas.situacao = Convert.ToInt32(dados["situacao"].ToString());
+                    lstcacambas.Add(cacambas);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Erro na Consulta de Cacambas");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+
+            return lstcacambas;
+        }
+
         public void Insert(MODEL.Cacambas cacambas)
         {
             SqlConnection conexao = new SqlConnection(strCon);
