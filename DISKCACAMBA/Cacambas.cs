@@ -177,5 +177,65 @@ namespace DISKCACAMBA
             gpbPesquisa.Visible = !gpbPesquisa.Visible;
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void lblFiltrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbdID_CheckedChanged(object sender, EventArgs e)
+        {
+            lblFiltrar.Text = "Informe o ID: ";
+            txtFiltro.Text = string.Empty;
+            lblFiltrar.Visible = true;
+            txtFiltro.Visible = true;
+            txtFiltro.Focus();
+        }
+
+        private void rdbTipo_CheckedChanged(object sender, EventArgs e)
+        {
+            lblFiltrar.Text = "Informe o Tipo: ";
+            txtFiltro.Text = string.Empty;
+            lblFiltrar.Visible = true;
+            txtFiltro.Visible = true;
+            txtFiltro.Focus();
+        }
+
+        private void rdbTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            lblFiltrar.Visible = false;
+            txtFiltro.Visible = false;
+            CAMADAS.BLL.Cacambas bllCacambas = new CAMADAS.BLL.Cacambas();
+            List<CAMADAS.MODEL.Cacambas> lstCacambas = new List<CAMADAS.MODEL.Cacambas>();
+            lstCacambas = bllCacambas.Select();
+            dgvCacambas.DataSource = "";
+            dgvCacambas.DataSource = lstCacambas;
+
+
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            CAMADAS.BLL.Cacambas bllCacambas = new CAMADAS.BLL.Cacambas();
+            List<CAMADAS.MODEL.Cacambas> lstCacambas = new List<CAMADAS.MODEL.Cacambas>();
+
+            if (rdbTodos.Checked)
+                lstCacambas = bllCacambas.Select();
+                
+                else if (rdbTipo.Checked)
+                        lstCacambas = bllCacambas.SelectByTipo(txtFiltro.Text);
+                     else
+                     {
+                         int id = Convert.ToInt32(txtFiltro.Text);
+                         lstCacambas = bllCacambas.SelectByID(id);
+                     }
+            dgvCacambas.DataSource = "";
+            dgvCacambas.DataSource = lstCacambas;
+        }
     }
 }

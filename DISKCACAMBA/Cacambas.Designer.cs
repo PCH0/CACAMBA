@@ -47,12 +47,12 @@
             this.lblID = new System.Windows.Forms.Label();
             this.btnPESQUISAR = new System.Windows.Forms.Button();
             this.gpbPesquisa = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtFiltro = new System.Windows.Forms.TextBox();
+            this.rdbTipo = new System.Windows.Forms.RadioButton();
+            this.rbdID = new System.Windows.Forms.RadioButton();
+            this.rdbTodos = new System.Windows.Forms.RadioButton();
+            this.btnFiltrar = new System.Windows.Forms.Button();
+            this.lblFiltrar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCacambas)).BeginInit();
             this.gpbPesquisa.SuspendLayout();
             this.SuspendLayout();
@@ -238,12 +238,12 @@
             // gpbPesquisa
             // 
             this.gpbPesquisa.BackColor = System.Drawing.Color.Gray;
-            this.gpbPesquisa.Controls.Add(this.button1);
-            this.gpbPesquisa.Controls.Add(this.textBox1);
-            this.gpbPesquisa.Controls.Add(this.label3);
-            this.gpbPesquisa.Controls.Add(this.radioButton3);
-            this.gpbPesquisa.Controls.Add(this.radioButton2);
-            this.gpbPesquisa.Controls.Add(this.radioButton1);
+            this.gpbPesquisa.Controls.Add(this.lblFiltrar);
+            this.gpbPesquisa.Controls.Add(this.btnFiltrar);
+            this.gpbPesquisa.Controls.Add(this.txtFiltro);
+            this.gpbPesquisa.Controls.Add(this.rdbTipo);
+            this.gpbPesquisa.Controls.Add(this.rbdID);
+            this.gpbPesquisa.Controls.Add(this.rdbTodos);
             this.gpbPesquisa.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
             this.gpbPesquisa.Location = new System.Drawing.Point(489, 10);
             this.gpbPesquisa.Name = "gpbPesquisa";
@@ -253,63 +253,70 @@
             this.gpbPesquisa.Text = "Filtrar Dados";
             this.gpbPesquisa.Visible = false;
             // 
-            // radioButton1
+            // txtFiltro
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(5, 23);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(148, 27);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.txtFiltro.Location = new System.Drawing.Point(5, 189);
+            this.txtFiltro.Name = "txtFiltro";
+            this.txtFiltro.Size = new System.Drawing.Size(451, 32);
+            this.txtFiltro.TabIndex = 4;
+            this.txtFiltro.Visible = false;
             // 
-            // radioButton2
+            // rdbTipo
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(5, 59);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(148, 27);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdbTipo.AutoSize = true;
+            this.rdbTipo.Location = new System.Drawing.Point(5, 97);
+            this.rdbTipo.Name = "rdbTipo";
+            this.rdbTipo.Size = new System.Drawing.Size(68, 27);
+            this.rdbTipo.TabIndex = 2;
+            this.rdbTipo.Text = "&Tipo";
+            this.rdbTipo.UseVisualStyleBackColor = true;
+            this.rdbTipo.CheckedChanged += new System.EventHandler(this.rdbTipo_CheckedChanged);
             // 
-            // radioButton3
+            // rbdID
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(5, 97);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(148, 27);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbdID.AutoSize = true;
+            this.rbdID.Location = new System.Drawing.Point(5, 59);
+            this.rbdID.Name = "rbdID";
+            this.rbdID.Size = new System.Drawing.Size(48, 27);
+            this.rbdID.TabIndex = 1;
+            this.rbdID.Text = "&ID";
+            this.rbdID.UseVisualStyleBackColor = true;
+            this.rbdID.CheckedChanged += new System.EventHandler(this.rbdID_CheckedChanged);
             // 
-            // label3
+            // rdbTodos
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 140);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 23);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "label3";
+            this.rdbTodos.AutoSize = true;
+            this.rdbTodos.Checked = true;
+            this.rdbTodos.Location = new System.Drawing.Point(5, 23);
+            this.rdbTodos.Name = "rdbTodos";
+            this.rdbTodos.Size = new System.Drawing.Size(83, 27);
+            this.rdbTodos.TabIndex = 0;
+            this.rdbTodos.TabStop = true;
+            this.rdbTodos.Text = "&Todos";
+            this.rdbTodos.UseVisualStyleBackColor = true;
+            this.rdbTodos.CheckedChanged += new System.EventHandler(this.rdbTodos_CheckedChanged);
             // 
-            // textBox1
+            // btnFiltrar
             // 
-            this.textBox1.Location = new System.Drawing.Point(5, 167);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(451, 32);
-            this.textBox1.TabIndex = 4;
+            this.btnFiltrar.Image = global::DISKCACAMBA.Properties.Resources.Filtrar1;
+            this.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFiltrar.Location = new System.Drawing.Point(356, 227);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(100, 36);
+            this.btnFiltrar.TabIndex = 5;
+            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
-            // button1
+            // lblFiltrar
             // 
-            this.button1.Location = new System.Drawing.Point(337, 246);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 36);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lblFiltrar.Location = new System.Drawing.Point(6, 157);
+            this.lblFiltrar.Name = "lblFiltrar";
+            this.lblFiltrar.Size = new System.Drawing.Size(451, 29);
+            this.lblFiltrar.TabIndex = 7;
+            this.lblFiltrar.Visible = false;
+            this.lblFiltrar.Click += new System.EventHandler(this.lblFiltrar_Click);
             // 
             // Cacambas
             // 
@@ -372,11 +379,11 @@
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Button btnPESQUISAR;
         private System.Windows.Forms.GroupBox gpbPesquisa;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rdbTodos;
+        private System.Windows.Forms.Button btnFiltrar;
+        private System.Windows.Forms.TextBox txtFiltro;
+        private System.Windows.Forms.RadioButton rdbTipo;
+        private System.Windows.Forms.RadioButton rbdID;
+        private System.Windows.Forms.Label lblFiltrar;
     }
 }
