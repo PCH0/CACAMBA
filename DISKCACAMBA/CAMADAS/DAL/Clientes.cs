@@ -129,5 +129,40 @@ namespace DISKCACAMBA.CAMADAS.DAL
             }
         }
 
+        public MODEL.Clientes SelectById(int id)
+        {
+            MODEL.Clientes clientes = new MODEL.Clientes();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "SELECT * FROM Clientes WHERE id=@id;";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@id", id);
+            try
+            {
+                conexao.Open();
+                SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                if (dados.Read())
+                {
+                    clientes.id = Convert.ToInt32(dados["id"].ToString());
+                    clientes.nome = dados["nome"].ToString();
+                    clientes.endereco = dados["endereco"].ToString();
+                    clientes.telefone = dados["telefone"].ToString();
+                    clientes.dias = Convert.ToInt32(dados["dias"].ToString());
+                    clientes.multa = Convert.ToSingle(dados["multa"].ToString());
+
+
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Deu erro na consulta de Clientes por ID");
+
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            return clientes;
+        }
+
     }
 }

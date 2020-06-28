@@ -71,7 +71,7 @@
             // 
             this.lbTIPO.AutoSize = true;
             this.lbTIPO.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lbTIPO.Location = new System.Drawing.Point(293, 18);
+            this.lbTIPO.Location = new System.Drawing.Point(264, 18);
             this.lbTIPO.Name = "lbTIPO";
             this.lbTIPO.Size = new System.Drawing.Size(53, 23);
             this.lbTIPO.TabIndex = 2;
@@ -117,9 +117,9 @@
             // txtTIPO
             // 
             this.txtTIPO.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtTIPO.Location = new System.Drawing.Point(358, 12);
+            this.txtTIPO.Location = new System.Drawing.Point(328, 12);
             this.txtTIPO.Name = "txtTIPO";
-            this.txtTIPO.Size = new System.Drawing.Size(125, 32);
+            this.txtTIPO.Size = new System.Drawing.Size(155, 32);
             this.txtTIPO.TabIndex = 8;
             // 
             // txtTAMANHO

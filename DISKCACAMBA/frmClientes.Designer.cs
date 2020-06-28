@@ -161,7 +161,7 @@
             this.btnSAIR.Name = "btnSAIR";
             this.btnSAIR.Size = new System.Drawing.Size(109, 29);
             this.btnSAIR.TabIndex = 14;
-            this.btnSAIR.Text = "SAIR";
+            this.btnSAIR.Text = "VOLTAR";
             this.btnSAIR.UseVisualStyleBackColor = true;
             this.btnSAIR.Click += new System.EventHandler(this.btnSAIR_Click);
             // 
@@ -222,7 +222,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1300, 700);
+            this.ClientSize = new System.Drawing.Size(1284, 661);
             this.ControlBox = false;
             this.Controls.Add(this.txtENDERECO);
             this.Controls.Add(this.txtTELEFONE);

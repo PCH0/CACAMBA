@@ -10,7 +10,8 @@ namespace DISKCACAMBA.CAMADAS.MODEL
     public class Aluguel
     {
         public int id { get; set; }
-        public int client_id { get; set; }
+        public int cliente_id { get; set; }
+        public string nomeCli { get; set;}
         public DateTime date { get; set; }
 
     }

@@ -61,6 +61,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CAMADAS\BLL\Aluguel.cs" />
+    <Compile Include="CAMADAS\DAL\Aluguel.cs" />
     <Compile Include="frmCacambas.cs">
       <SubType>Form</SubType>
     </Compile>
