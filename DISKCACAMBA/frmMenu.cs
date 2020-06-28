@@ -35,5 +35,10 @@ namespace DISKCACAMBA
             frmCac.MdiParent = this;
             frmCac.Show();
         }
+
+        private void caçambasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RELATORIOS.Relgerais.relcacambas();
+        }
     }
 }

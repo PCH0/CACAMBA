@@ -117,9 +117,9 @@
             // txtTIPO
             // 
             this.txtTIPO.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtTIPO.Location = new System.Drawing.Point(374, 15);
+            this.txtTIPO.Location = new System.Drawing.Point(358, 12);
             this.txtTIPO.Name = "txtTIPO";
-            this.txtTIPO.Size = new System.Drawing.Size(109, 32);
+            this.txtTIPO.Size = new System.Drawing.Size(125, 32);
             this.txtTIPO.TabIndex = 8;
             // 
             // txtTAMANHO

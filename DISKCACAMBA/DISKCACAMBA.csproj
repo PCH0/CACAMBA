@@ -89,6 +89,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RELATORIOS\Funcoes.cs" />
+    <Compile Include="RELATORIOS\relcacambas.cs" />
     <EmbeddedResource Include="frmCacambas.resx">
       <DependentUpon>frmCacambas.cs</DependentUpon>
     </EmbeddedResource>

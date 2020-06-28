@@ -30,14 +30,14 @@
         {
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.movimentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.empréstimosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.devoluçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.caçambasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.caçambasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.movimentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.empréstimosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.devoluçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.caçambasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +64,20 @@
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(105, 27);
             this.cadastrosToolStripMenuItem.Text = "&Cadastros";
             // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(166, 28);
+            this.clientesToolStripMenuItem.Text = "&Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
+            // 
+            // caçambasToolStripMenuItem1
+            // 
+            this.caçambasToolStripMenuItem1.Name = "caçambasToolStripMenuItem1";
+            this.caçambasToolStripMenuItem1.Size = new System.Drawing.Size(166, 28);
+            this.caçambasToolStripMenuItem1.Text = "C&açambas";
+            this.caçambasToolStripMenuItem1.Click += new System.EventHandler(this.caçambasToolStripMenuItem1_Click);
+            // 
             // movimentosToolStripMenuItem
             // 
             this.movimentosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -74,6 +88,18 @@
             this.movimentosToolStripMenuItem.Size = new System.Drawing.Size(126, 27);
             this.movimentosToolStripMenuItem.Text = "&Movimentos";
             // 
+            // empréstimosToolStripMenuItem
+            // 
+            this.empréstimosToolStripMenuItem.Name = "empréstimosToolStripMenuItem";
+            this.empréstimosToolStripMenuItem.Size = new System.Drawing.Size(169, 28);
+            this.empréstimosToolStripMenuItem.Text = "A&lugueis";
+            // 
+            // devoluçãoToolStripMenuItem
+            // 
+            this.devoluçãoToolStripMenuItem.Name = "devoluçãoToolStripMenuItem";
+            this.devoluçãoToolStripMenuItem.Size = new System.Drawing.Size(169, 28);
+            this.devoluçãoToolStripMenuItem.Text = "&Devolução";
+            // 
             // relatóriosToolStripMenuItem
             // 
             this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -83,6 +109,13 @@
             this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(106, 27);
             this.relatóriosToolStripMenuItem.Text = "&Relatórios";
             // 
+            // caçambasToolStripMenuItem
+            // 
+            this.caçambasToolStripMenuItem.Name = "caçambasToolStripMenuItem";
+            this.caçambasToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.caçambasToolStripMenuItem.Text = "C&açambas";
+            this.caçambasToolStripMenuItem.Click += new System.EventHandler(this.caçambasToolStripMenuItem_Click);
+            // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -90,38 +123,6 @@
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(54, 27);
             this.sairToolStripMenuItem.Text = "&Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
-            // 
-            // empréstimosToolStripMenuItem
-            // 
-            this.empréstimosToolStripMenuItem.Name = "empréstimosToolStripMenuItem";
-            this.empréstimosToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
-            this.empréstimosToolStripMenuItem.Text = "A&lugueis";
-            // 
-            // devoluçãoToolStripMenuItem
-            // 
-            this.devoluçãoToolStripMenuItem.Name = "devoluçãoToolStripMenuItem";
-            this.devoluçãoToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
-            this.devoluçãoToolStripMenuItem.Text = "&Devolução";
-            // 
-            // caçambasToolStripMenuItem
-            // 
-            this.caçambasToolStripMenuItem.Name = "caçambasToolStripMenuItem";
-            this.caçambasToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
-            this.caçambasToolStripMenuItem.Text = "C&açambas";
-            // 
-            // clientesToolStripMenuItem
-            // 
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
-            this.clientesToolStripMenuItem.Text = "&Clientes";
-            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
-            // 
-            // caçambasToolStripMenuItem1
-            // 
-            this.caçambasToolStripMenuItem1.Name = "caçambasToolStripMenuItem1";
-            this.caçambasToolStripMenuItem1.Size = new System.Drawing.Size(180, 28);
-            this.caçambasToolStripMenuItem1.Text = "C&açambas";
-            this.caçambasToolStripMenuItem1.Click += new System.EventHandler(this.caçambasToolStripMenuItem1_Click);
             // 
             // frmMenu
             // 
@@ -137,7 +138,7 @@
             this.MinimumSize = new System.Drawing.Size(1300, 700);
             this.Name = "frmMenu";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DISK-CAÇAMBAS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.MenuStrip.ResumeLayout(false);
