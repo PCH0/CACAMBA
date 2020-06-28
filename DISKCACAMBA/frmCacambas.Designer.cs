@@ -47,12 +47,12 @@
             this.lblID = new System.Windows.Forms.Label();
             this.btnPESQUISAR = new System.Windows.Forms.Button();
             this.gpbPesquisa = new System.Windows.Forms.GroupBox();
+            this.lblFiltrar = new System.Windows.Forms.Label();
+            this.btnFiltrar = new System.Windows.Forms.Button();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.rdbTipo = new System.Windows.Forms.RadioButton();
             this.rbdID = new System.Windows.Forms.RadioButton();
             this.rdbTodos = new System.Windows.Forms.RadioButton();
-            this.btnFiltrar = new System.Windows.Forms.Button();
-            this.lblFiltrar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCacambas)).BeginInit();
             this.gpbPesquisa.SuspendLayout();
             this.SuspendLayout();
@@ -253,6 +253,28 @@
             this.gpbPesquisa.Text = "Filtrar Dados";
             this.gpbPesquisa.Visible = false;
             // 
+            // lblFiltrar
+            // 
+            this.lblFiltrar.Location = new System.Drawing.Point(6, 157);
+            this.lblFiltrar.Name = "lblFiltrar";
+            this.lblFiltrar.Size = new System.Drawing.Size(451, 29);
+            this.lblFiltrar.TabIndex = 7;
+            this.lblFiltrar.Visible = false;
+            this.lblFiltrar.Click += new System.EventHandler(this.lblFiltrar_Click);
+            // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Image = global::DISKCACAMBA.Properties.Resources.Filtrar1;
+            this.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFiltrar.Location = new System.Drawing.Point(356, 227);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(100, 36);
+            this.btnFiltrar.TabIndex = 5;
+            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
+            // 
             // txtFiltro
             // 
             this.txtFiltro.Location = new System.Drawing.Point(5, 189);
@@ -296,34 +318,11 @@
             this.rdbTodos.UseVisualStyleBackColor = true;
             this.rdbTodos.CheckedChanged += new System.EventHandler(this.rdbTodos_CheckedChanged);
             // 
-            // btnFiltrar
+            // frmCacambas
             // 
-            this.btnFiltrar.Image = global::DISKCACAMBA.Properties.Resources.Filtrar1;
-            this.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFiltrar.Location = new System.Drawing.Point(356, 227);
-            this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(100, 36);
-            this.btnFiltrar.TabIndex = 5;
-            this.btnFiltrar.Text = "Filtrar";
-            this.btnFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFiltrar.UseVisualStyleBackColor = true;
-            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
-            // 
-            // lblFiltrar
-            // 
-            this.lblFiltrar.Location = new System.Drawing.Point(6, 157);
-            this.lblFiltrar.Name = "lblFiltrar";
-            this.lblFiltrar.Size = new System.Drawing.Size(451, 29);
-            this.lblFiltrar.TabIndex = 7;
-            this.lblFiltrar.Visible = false;
-            this.lblFiltrar.Click += new System.EventHandler(this.lblFiltrar_Click);
-            // 
-            // Cacambas
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(986, 512);
+            this.ClientSize = new System.Drawing.Size(1284, 661);
             this.ControlBox = false;
             this.Controls.Add(this.gpbPesquisa);
             this.Controls.Add(this.btnPESQUISAR);
@@ -344,12 +343,16 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbTIPO);
             this.Controls.Add(this.label2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1300, 700);
             this.MinimizeBox = false;
-            this.Name = "Cacambas";
+            this.MinimumSize = new System.Drawing.Size(1300, 700);
+            this.Name = "frmCacambas";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cacambas";
+            this.Text = "BUSCA CAÇAMBA";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Cacambas_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCacambas)).EndInit();
             this.gpbPesquisa.ResumeLayout(false);

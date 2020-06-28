@@ -16,5 +16,24 @@ namespace DISKCACAMBA
         {
             InitializeComponent();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 frmCli = new Form1();
+            frmCli.MdiParent = this;
+            frmCli.Show();
+        }
+
+        private void caçambasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmCacambas frmCac = new frmCacambas();
+            frmCac.MdiParent = this;
+            frmCac.Show();
+        }
     }
 }
