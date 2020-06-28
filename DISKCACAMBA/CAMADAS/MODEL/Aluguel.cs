@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DISKCACAMBA.CAMADAS.MODEL
 {
+    //altamiro
     public class Aluguel
     {
         public int id { get; set; }
