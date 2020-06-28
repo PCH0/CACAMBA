@@ -61,11 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cacambas.cs">
+    <Compile Include="frmCacambas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cacambas.Designer.cs">
-      <DependentUpon>Cacambas.cs</DependentUpon>
+    <Compile Include="frmCacambas.Designer.cs">
+      <DependentUpon>frmCacambas.cs</DependentUpon>
     </Compile>
     <Compile Include="CAMADAS\BLL\Cacambas.cs" />
     <Compile Include="CAMADAS\DAL\Cacambas.cs" />
@@ -75,25 +75,25 @@
     <Compile Include="CAMADAS\MODEL\Cacambas.cs" />
     <Compile Include="CAMADAS\MODEL\Clientes.cs" />
     <Compile Include="CAMADAS\MODEL\Itens.cs" />
-    <Compile Include="Clientes.cs">
+    <Compile Include="frmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Clientes.Designer.cs">
-      <DependentUpon>Clientes.cs</DependentUpon>
+    <Compile Include="frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Cacambas.resx">
-      <DependentUpon>Cacambas.cs</DependentUpon>
+    <EmbeddedResource Include="frmCacambas.resx">
+      <DependentUpon>frmCacambas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Clientes.resx">
-      <DependentUpon>Clientes.cs</DependentUpon>
+    <EmbeddedResource Include="frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

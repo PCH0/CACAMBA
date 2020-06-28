@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace DISKCACAMBA
 {
-    public partial class Cacambas : Form
+    public partial class frmCacambas : Form
     {
-        public Cacambas()
+        public frmCacambas()
         {
             InitializeComponent();
         }

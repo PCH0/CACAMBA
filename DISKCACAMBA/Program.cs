@@ -16,7 +16,7 @@ namespace DISKCACAMBA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Cacambas());
+            Application.Run(new frmCacambas());
         }
     }
 }

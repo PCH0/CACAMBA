@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DISKCACAMBA
 {
-    public partial class Menu : Form
+    public partial class frmMenu : Form
     {
-        public Menu()
+        public frmMenu()
         {
             InitializeComponent();
         }

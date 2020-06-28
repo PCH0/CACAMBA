@@ -1,6 +1,6 @@
 ﻿namespace DISKCACAMBA
 {
-    partial class Cacambas
+    partial class frmCacambas
     {
         /// <summary>
         /// Required designer variable.
