@@ -11,6 +11,7 @@ namespace DISKCACAMBA.CAMADAS.MODEL
         public int id { get; set; }
         public int aluguel_id { get; set; }
         public int cacambas_id { get; set; }
+        public string tipo { get; set; }
         public DateTime entrega { get; set; }
 
     }

@@ -10,7 +10,7 @@ namespace DISKCACAMBA.CAMADAS.DAL
 {
     public class Aluguel
     {
-        private string strCon = Conexao.getConexao();
+        private string strCon = CAMADAS.DAL.Conexao.getConexao();
         // Método de Recuperação: Dados Aluguel
         public List<MODEL.Aluguel> Select()
         {
@@ -49,6 +49,44 @@ namespace DISKCACAMBA.CAMADAS.DAL
             return lstAluguel;
         }
         //Método Insert dados: Aluguel
+
+        public List<MODEL.Aluguel> SelectByID(int id)
+        {
+            List<MODEL.Aluguel> lstAluguel = new List<MODEL.Aluguel>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "SELECT * FROM Aluguel WHERE id=@id;";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@id", id);
+            try
+            {
+                conexao.Open();
+                SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dados.Read())
+                {
+                    //dados do emprestimo
+                    CAMADAS.MODEL.Aluguel aluguel = new MODEL.Aluguel();
+                    aluguel.id = Convert.ToInt32(dados["id"].ToString());
+                    aluguel.cliente_id = Convert.ToInt32(dados["clientes_id"].ToString());
+                    aluguel.date = Convert.ToDateTime(dados["data"].ToString());
+                    //recuperar nome do cliente
+                    CAMADAS.DAL.Clientes dalCli = new Clientes();
+                    CAMADAS.MODEL.Clientes Clientes = dalCli.SelectById(aluguel.cliente_id);
+                    aluguel.nomeCli = Clientes.nome;
+                    lstAluguel.Add(aluguel);
+
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Deu erro na consulta ID de Alugueis");
+
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            return lstAluguel;
+        }
         public void Insert(MODEL.Aluguel aluguel)
         {
             SqlConnection conexao = new SqlConnection(strCon);
@@ -80,8 +118,9 @@ namespace DISKCACAMBA.CAMADAS.DAL
         public void Update(MODEL.Aluguel aluguel)
         {
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "UPDATE Aluguel SET clientes_id=@clientes_id, data=@data ";
+            string sql = "UPDATE Aluguel SET clientes_id=@clientes_id, data=@dataID ";
             sql += " WHERE id=@id";
+
             SqlCommand cmd = new SqlCommand(sql, conexao);
             cmd.Parameters.AddWithValue("@id", aluguel.id);
             cmd.Parameters.AddWithValue("@clientes_id", aluguel.cliente_id);

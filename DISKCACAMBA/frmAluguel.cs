@@ -27,9 +27,16 @@ namespace DISKCACAMBA
             dtpData.Value = Convert.ToDateTime(DateTime.Now.ToShortDateString());
 
         }
+
+        private void limparItem()
+        {
+            lblItemID.Text = "-1";
+            dtpEntrega.Value = Convert.ToDateTime("1/1//1900");
+        }
         private void frmAluguel_Load(object sender, EventArgs e)
         {
             CAMADAS.BLL.Aluguel bllAlu = new CAMADAS.BLL.Aluguel();
+            dgvAluguel.DataSource = "";
             dgvAluguel.DataSource = bllAlu.Select();
 
             CAMADAS.DAL.Clientes dalCli = new CAMADAS.DAL.Clientes();
@@ -96,9 +103,35 @@ namespace DISKCACAMBA
             CAMADAS.BLL.Aluguel bllAlu = new CAMADAS.BLL.Aluguel();
             if (lblAluID.Text == "-1")
                  bllAlu.Insert(aluguel);
+
             else bllAlu.Update(aluguel);
 
-            dgvAluguel.DataSource = bllAlu.Select();
+            List<CAMADAS.MODEL.Aluguel> lstAlu = bllAlu.Select();
+            dgvAluguel.DataSource = "";
+            dgvAluguel.DataSource = lstAlu;
+
+        }
+
+        private void lblAluID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvAluguel_DoubleClick(object sender, EventArgs e)
+        {
+            lblAluID.Text = dgvAluguel.SelectedRows[0].Cells["id"].Value.ToString();
+            txtClienteID.Text = dgvAluguel.SelectedRows[0].Cells["cliente_id"].Value.ToString();
+            cmbCliente.SelectedValue = dgvAluguel.SelectedRows[0].Cells["cliente_id"].Value;
+            dtpData.Value = Convert.ToDateTime(dgvAluguel.SelectedRows[0].Cells["date"].Value.ToString());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (lblAluID.Text != "-1"){
+                limparItem();
+                cmbCacamba.Focus();
+
+            }
         }
     }
 }

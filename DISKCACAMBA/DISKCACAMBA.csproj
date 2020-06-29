@@ -62,7 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CAMADAS\BLL\Aluguel.cs" />
+    <Compile Include="CAMADAS\BLL\Itens.cs" />
     <Compile Include="CAMADAS\DAL\Aluguel.cs" />
+    <Compile Include="CAMADAS\DAL\Itens.cs" />
     <Compile Include="frmAluguel.cs">
       <SubType>Form</SubType>
     </Compile>
