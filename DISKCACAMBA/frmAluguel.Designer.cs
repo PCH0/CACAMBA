@@ -44,22 +44,23 @@
             this.lblAluID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblItemID = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvItens = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dtpEntrega = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCacambaID = new System.Windows.Forms.TextBox();
             this.cmbCacamba = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAluguel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvItens)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -89,13 +90,14 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.button4);
             this.splitContainer1.Panel2.Controls.Add(this.lblItemID);
-            this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
+            this.splitContainer1.Panel2.Controls.Add(this.dgvItens);
             this.splitContainer1.Panel2.Controls.Add(this.button3);
             this.splitContainer1.Panel2.Controls.Add(this.button2);
             this.splitContainer1.Panel2.Controls.Add(this.button1);
             this.splitContainer1.Panel2.Controls.Add(this.dtpEntrega);
-            this.splitContainer1.Panel2.Controls.Add(this.textBox1);
+            this.splitContainer1.Panel2.Controls.Add(this.txtCacambaID);
             this.splitContainer1.Panel2.Controls.Add(this.cmbCacamba);
             this.splitContainer1.Panel2.Controls.Add(this.label6);
             this.splitContainer1.Panel2.Controls.Add(this.label5);
@@ -258,13 +260,15 @@
             this.lblItemID.Text = "-1";
             this.lblItemID.Visible = false;
             // 
-            // dataGridView1
+            // dgvItens
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(584, 11);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(616, 262);
-            this.dataGridView1.TabIndex = 9;
+            this.dgvItens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvItens.Location = new System.Drawing.Point(584, 11);
+            this.dgvItens.Name = "dgvItens";
+            this.dgvItens.Size = new System.Drawing.Size(616, 262);
+            this.dgvItens.TabIndex = 9;
+            this.dgvItens.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItens_CellContentClick);
+            this.dgvItens.DoubleClick += new System.EventHandler(this.dgvItens_DoubleClick);
             // 
             // button3
             // 
@@ -273,8 +277,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(92, 34);
             this.button3.TabIndex = 8;
-            this.button3.Text = "&Gravar";
+            this.button3.Text = "Aluguel";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -305,14 +310,17 @@
             this.dtpEntrega.Name = "dtpEntrega";
             this.dtpEntrega.Size = new System.Drawing.Size(217, 32);
             this.dtpEntrega.TabIndex = 5;
+            this.dtpEntrega.ValueChanged += new System.EventHandler(this.dtpEntrega_ValueChanged);
             // 
-            // textBox1
+            // txtCacambaID
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(412, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(117, 32);
-            this.textBox1.TabIndex = 4;
+            this.txtCacambaID.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtCacambaID.Location = new System.Drawing.Point(412, 57);
+            this.txtCacambaID.Name = "txtCacambaID";
+            this.txtCacambaID.Size = new System.Drawing.Size(117, 32);
+            this.txtCacambaID.TabIndex = 4;
+            this.txtCacambaID.TextChanged += new System.EventHandler(this.txtCacambaID_TextChanged);
+            this.txtCacambaID.Leave += new System.EventHandler(this.txtCacambaID_Leave);
             // 
             // cmbCacamba
             // 
@@ -322,6 +330,8 @@
             this.cmbCacamba.Name = "cmbCacamba";
             this.cmbCacamba.Size = new System.Drawing.Size(257, 31);
             this.cmbCacamba.TabIndex = 3;
+            this.cmbCacamba.SelectedIndexChanged += new System.EventHandler(this.cmbCacamba_SelectedIndexChanged);
+            this.cmbCacamba.Leave += new System.EventHandler(this.cmbCacamba_Leave);
             // 
             // label6
             // 
@@ -353,6 +363,17 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Item ID:";
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold);
+            this.button4.Location = new System.Drawing.Point(404, 152);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(100, 34);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "Devolver";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // frmAluguel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -377,7 +398,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAluguel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvItens)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -400,15 +421,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblItemID;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvItens;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dtpEntrega;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCacambaID;
         private System.Windows.Forms.ComboBox cmbCacamba;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button4;
     }
 }

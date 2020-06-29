@@ -34,7 +34,6 @@
             this.caçambasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.movimentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empréstimosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.devoluçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.caçambasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,8 +80,7 @@
             // movimentosToolStripMenuItem
             // 
             this.movimentosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.empréstimosToolStripMenuItem,
-            this.devoluçãoToolStripMenuItem});
+            this.empréstimosToolStripMenuItem});
             this.movimentosToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F);
             this.movimentosToolStripMenuItem.Name = "movimentosToolStripMenuItem";
             this.movimentosToolStripMenuItem.Size = new System.Drawing.Size(126, 27);
@@ -91,15 +89,9 @@
             // empréstimosToolStripMenuItem
             // 
             this.empréstimosToolStripMenuItem.Name = "empréstimosToolStripMenuItem";
-            this.empréstimosToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
-            this.empréstimosToolStripMenuItem.Text = "A&lugueis";
+            this.empréstimosToolStripMenuItem.Size = new System.Drawing.Size(270, 28);
+            this.empréstimosToolStripMenuItem.Text = "A&lugueis e Devoluções";
             this.empréstimosToolStripMenuItem.Click += new System.EventHandler(this.empréstimosToolStripMenuItem_Click);
-            // 
-            // devoluçãoToolStripMenuItem
-            // 
-            this.devoluçãoToolStripMenuItem.Name = "devoluçãoToolStripMenuItem";
-            this.devoluçãoToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
-            this.devoluçãoToolStripMenuItem.Text = "&Devolução";
             // 
             // relatóriosToolStripMenuItem
             // 
@@ -156,7 +148,6 @@
         private System.Windows.Forms.ToolStripMenuItem caçambasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem movimentosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem empréstimosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem devoluçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem caçambasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;

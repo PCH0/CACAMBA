@@ -16,7 +16,9 @@ namespace DISKCACAMBA.CAMADAS.BLL
 
         public void Insert(MODEL.Aluguel aluguel)
         {
+
             DAL.Aluguel dalAlu = new DAL.Aluguel();
+            
             dalAlu.Insert(aluguel);
         }
 
