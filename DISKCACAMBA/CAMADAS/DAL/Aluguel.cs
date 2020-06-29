@@ -33,6 +33,7 @@ namespace DISKCACAMBA.CAMADAS.DAL
                     CAMADAS.DAL.Clientes dalCli = new Clientes();
                     CAMADAS.MODEL.Clientes Clientes = dalCli.SelectById(aluguel.cliente_id);
                     aluguel.nomeCli = Clientes.nome;
+                    lstAluguel.Add(aluguel);
 
                 }
             }

@@ -40,5 +40,12 @@ namespace DISKCACAMBA
         {
             RELATORIOS.Relgerais.relcacambas();
         }
+
+        private void empréstimosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAluguel frmAlu = new frmAluguel();
+            frmAlu.MdiParent = this;
+            frmAlu.Show();
+        }
     }
 }

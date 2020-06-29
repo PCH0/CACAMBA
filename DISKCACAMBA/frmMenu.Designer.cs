@@ -91,13 +91,14 @@
             // empréstimosToolStripMenuItem
             // 
             this.empréstimosToolStripMenuItem.Name = "empréstimosToolStripMenuItem";
-            this.empréstimosToolStripMenuItem.Size = new System.Drawing.Size(169, 28);
+            this.empréstimosToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
             this.empréstimosToolStripMenuItem.Text = "A&lugueis";
+            this.empréstimosToolStripMenuItem.Click += new System.EventHandler(this.empréstimosToolStripMenuItem_Click);
             // 
             // devoluçãoToolStripMenuItem
             // 
             this.devoluçãoToolStripMenuItem.Name = "devoluçãoToolStripMenuItem";
-            this.devoluçãoToolStripMenuItem.Size = new System.Drawing.Size(169, 28);
+            this.devoluçãoToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
             this.devoluçãoToolStripMenuItem.Text = "&Devolução";
             // 
             // relatóriosToolStripMenuItem
@@ -112,7 +113,7 @@
             // caçambasToolStripMenuItem
             // 
             this.caçambasToolStripMenuItem.Name = "caçambasToolStripMenuItem";
-            this.caçambasToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.caçambasToolStripMenuItem.Size = new System.Drawing.Size(166, 28);
             this.caçambasToolStripMenuItem.Text = "C&açambas";
             this.caçambasToolStripMenuItem.Click += new System.EventHandler(this.caçambasToolStripMenuItem_Click);
             // 
@@ -126,8 +127,7 @@
             // 
             // frmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1284, 661);
             this.ControlBox = false;
             this.Controls.Add(this.MenuStrip);
